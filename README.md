@@ -14,7 +14,7 @@ tanpa framework) dengan server kecil Node.js untuk komentar dan daftar langganan
 - Panel admin sederhana di `/admin`
 - Anti-spam: honeypot, pembatasan jumlah kiriman, dan validasi input
 
-**Ukuran halaman depan:** 44,5 KB HTML + CSS + JS, menjadi **13,2 KB** setelah gzip
+**Ukuran halaman depan:** 46,8 KB HTML + CSS + JS, menjadi **13,9 KB** setelah gzip
 (gambar terpisah). Tanpa font eksternal, tanpa pelacak, tanpa permintaan ke domain lain.
 
 ---
@@ -52,7 +52,8 @@ npm run dev
 
 ```
 content/
-  site.json          ← identitas, teks tentang, layanan, media sosial, warna
+  site.json          ← identitas, teks tentang, fakta, layanan, WhatsApp,
+                       media sosial, feed, SEO, warna aksen, rasio sampul
   projects.json      ← DAFTAR KARYA (yang paling sering Anda ubah)
 public/
   index.html         ← beranda

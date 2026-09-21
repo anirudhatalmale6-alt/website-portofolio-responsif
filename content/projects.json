@@ -1,117 +1,59 @@
 [
   {
-    "slug": "kedai-kopi-asa",
-    "title": "Kedai Kopi Asa",
-    "category": "Identitas Merek",
+    "slug": "website-top-up",
+    "title": "Website Top Up",
+    "category": "Web Development",
     "year": "2026",
-    "client": "Asa Coffee Roasters",
-    "role": "Identitas visual, kemasan",
-    "cover": "/img/projects/asa-cover.svg",
-    "summary": "Identitas hangat untuk roastery kecil di Bandung, dibangun dari bentuk biji kopi yang disederhanakan.",
+    "role": "Frontend Developer",
+    "cover": "/img/projects/project-topup.svg",
+    "summary": "Website sederhana untuk menampilkan layanan top up dengan tampilan yang mudah dipahami dan responsif.",
     "featured": true,
     "body": [
-      "Asa memanggang dalam jumlah kecil dan menjual langsung ke pelanggan. Identitasnya harus terasa buatan tangan tanpa terlihat berantakan.",
-      "Sistemnya berdiri di atas satu bentuk dasar yang bisa dipotong, diulang, dan dijadikan pola kemasan. Warnanya diambil dari tingkat sangrai: light, medium, dark."
+      "Project ini berfokus pada struktur halaman, kartu layanan, tombol aksi, dan pengalaman pengguna di perangkat mobile.",
+      "Susunan halaman dibuat sesederhana mungkin supaya pengunjung langsung menemukan layanan yang dicari tanpa banyak klik."
     ],
     "gallery": [
-      "/img/projects/asa-1.svg",
-      "/img/projects/asa-2.svg"
+      "/img/projects/project-topup-detail.svg"
     ],
-    "tags": ["branding", "packaging", "print"],
+    "tags": ["HTML", "CSS", "JavaScript"],
     "link": ""
   },
   {
-    "slug": "nusa-travel-app",
-    "title": "Nusa Travel App",
-    "category": "Desain Antarmuka",
+    "slug": "website-promosi",
+    "title": "Website Promosi",
+    "category": "Landing Page",
     "year": "2026",
-    "client": "Nusa",
-    "role": "UX, UI, prototipe",
-    "cover": "/img/projects/nusa-cover.svg",
-    "summary": "Aplikasi perjalanan yang menyusun rencana harian otomatis dari daftar tempat yang disimpan pengguna.",
+    "role": "Web Developer",
+    "cover": "/img/projects/project-promo.svg",
+    "summary": "Landing page sederhana untuk mempromosikan jasa atau produk dengan desain modern.",
     "featured": true,
     "body": [
-      "Masalah utamanya bukan mencari tempat, tapi menyusunnya jadi hari yang masuk akal. Rancangan ini menaruh peta dan linimasa pada satu layar.",
-      "Prototipe diuji ke delapan orang. Waktu menyusun rencana tiga hari turun dari rata-rata 22 menit menjadi 7 menit."
+      "Project ini dibuat dengan pendekatan visual yang ringan, section yang jelas, CTA, dan layout responsive.",
+      "Setiap bagian halaman punya satu tugas: memperkenalkan, meyakinkan, lalu mengarahkan pengunjung ke tombol aksi."
     ],
     "gallery": [
-      "/img/projects/nusa-1.svg",
-      "/img/projects/nusa-2.svg"
+      "/img/projects/project-promo-detail.svg"
     ],
-    "tags": ["ux", "mobile", "prototype"],
+    "tags": ["HTML", "CSS", "Responsive"],
     "link": ""
   },
   {
-    "slug": "pameran-ruang-sunyi",
-    "title": "Pameran Ruang Sunyi",
-    "category": "Arahan Seni",
-    "year": "2025",
-    "client": "Galeri Selasar",
-    "role": "Arahan seni, materi cetak",
-    "cover": "/img/projects/sunyi-cover.svg",
-    "summary": "Materi visual untuk pameran tunggal, dari poster jalanan sampai katalog 64 halaman.",
+    "slug": "portfolio-pribadi",
+    "title": "Portfolio Pribadi",
+    "category": "Portfolio",
+    "year": "2026",
+    "role": "Web Developer",
+    "cover": "/img/projects/project-portfolio.svg",
+    "summary": "Website portfolio pribadi untuk menampilkan profil, keahlian, dan karya.",
     "featured": true,
     "body": [
-      "Seluruh materi memakai satu grid dan dua ukuran huruf. Pembatasan itu membuat karya yang dipamerkan tetap jadi pusat perhatian.",
-      "Poster dicetak risograph dua warna untuk menekan biaya produksi tanpa kehilangan karakter."
+      "Project ini menampilkan identitas, daftar kemampuan, project, kontak, mode gelap/terang, dan layout yang menyesuaikan layar.",
+      "Tujuannya satu halaman yang cukup untuk memperkenalkan diri, tanpa membuat pengunjung menunggu lama."
     ],
     "gallery": [
-      "/img/projects/sunyi-1.svg"
+      "/img/projects/project-portfolio-detail.svg"
     ],
-    "tags": ["editorial", "print", "exhibition"],
-    "link": ""
-  },
-  {
-    "slug": "toko-hijau-web",
-    "title": "Toko Hijau",
-    "category": "Desain Antarmuka",
-    "year": "2025",
-    "client": "Toko Hijau",
-    "role": "Desain web, front-end",
-    "cover": "/img/projects/hijau-cover.svg",
-    "summary": "Toko daring tanaman hias dengan halaman produk yang memuat dalam waktu di bawah satu detik.",
-    "featured": false,
-    "body": [
-      "Situs lama memuat 4,8 MB per halaman. Versi baru memangkasnya menjadi 380 KB dengan gambar responsif dan tanpa framework berat."
-    ],
-    "gallery": [
-      "/img/projects/hijau-1.svg"
-    ],
-    "tags": ["web", "e-commerce", "performance"],
-    "link": ""
-  },
-  {
-    "slug": "festival-layar",
-    "title": "Festival Layar",
-    "category": "Arahan Seni",
-    "year": "2025",
-    "client": "Festival Layar",
-    "role": "Identitas acara",
-    "cover": "/img/projects/layar-cover.svg",
-    "summary": "Identitas bergerak untuk festival film pendek, dibangun dari rasio layar yang berubah-ubah.",
-    "featured": false,
-    "body": [
-      "Logonya bukan satu bentuk tetap, melainkan bingkai yang menyesuaikan rasio film yang sedang diputar."
-    ],
-    "gallery": [],
-    "tags": ["motion", "identity", "film"],
-    "link": ""
-  },
-  {
-    "slug": "buku-resep-ibu",
-    "title": "Buku Resep Ibu",
-    "category": "Editorial",
-    "year": "2024",
-    "client": "Proyek pribadi",
-    "role": "Desain buku, fotografi",
-    "cover": "/img/projects/resep-cover.svg",
-    "summary": "Proyek pribadi: mengarsipkan 42 resep keluarga menjadi buku cetak terbatas.",
-    "featured": false,
-    "body": [
-      "Dicetak 60 eksemplar dan dibagikan ke keluarga besar. Tata letaknya dibuat agar buku bisa terbuka rata di atas meja dapur."
-    ],
-    "gallery": [],
-    "tags": ["editorial", "photography", "personal"],
+    "tags": ["HTML", "CSS", "JavaScript"],
     "link": ""
   }
 ]

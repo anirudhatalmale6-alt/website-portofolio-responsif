@@ -3,3 +3,5 @@ data/
 .env
 npm-install.log
 *.log
+client-zip/
+*.zip

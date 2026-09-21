@@ -30,6 +30,9 @@ async function init() {
 function renderHero() {
   const name = SITE.name || 'Portofolio';
   const role = SITE.role || '';
+  const status = document.querySelector('[data-hero="status"]');
+  if (SITE.availability) status.textContent = SITE.availability;
+  else status.closest('.hero__status').remove();
   document.querySelector('[data-hero="title"]').innerHTML =
     `${esc(name)}<br><em>${esc(role)}</em>`;
   document.querySelector('[data-hero="lead"]').textContent = SITE.tagline || '';
@@ -77,10 +80,10 @@ function cardHtml(p, index) {
   return `
     <a class="card reveal ${spanClass}" href="/karya/${encodeURIComponent(p.slug)}">
       <div class="card__media">
-        ${p.category ? `<span class="card__badge">${esc(p.category)}</span>` : ''}
-        <img src="${esc(p.cover)}" alt="${esc(p.title)}" loading="lazy" width="1200" height="900">
+        <img src="${esc(p.cover)}" alt="${esc(p.title)}" loading="lazy">
       </div>
       <div class="card__body">
+        ${p.category ? `<span class="card__cat">${esc(p.category)}</span>` : ''}
         <h3 class="card__title"><span>${esc(p.title)}</span><span>${num}</span></h3>
         <p class="card__summary">${esc(p.summary)}</p>
         <div class="card__meta"><span>${esc(p.year || '')}</span><span>${comments}</span></div>
@@ -104,6 +107,9 @@ function renderWork() {
 function renderAbout() {
   const box = document.querySelector('[data-about]');
   const paras = (SITE.about || []).map((t) => `<p>${esc(t)}</p>`).join('');
+  const facts = (SITE.facts || [])
+    .map((f) => `<div><span class="k">${esc(f.k)}</span><span class="v">${esc(f.v)}</span></div>`)
+    .join('');
   const services = (SITE.services || [])
     .map(
       (s, i) => `<li>
@@ -112,21 +118,38 @@ function renderAbout() {
       </li>`
     )
     .join('');
-  box.innerHTML = `${paras}${services ? `<ul class="services">${services}</ul>` : ''}`;
+  box.innerHTML = `${paras}
+    ${facts ? `<div class="facts">${facts}</div>` : ''}
+    ${services ? `<p class="eyebrow" style="margin-top:36px">Layanan</p><ul class="services">${services}</ul>` : ''}`;
 }
 
 /* ---------------------------------------------------------------- kontak */
 function renderContact() {
+  // Kontak utama: e-mail kalau diisi, kalau tidak pakai WhatsApp.
   const mail = document.querySelector('[data-contact="email"]');
   if (SITE.email_public) {
     mail.href = `mailto:${SITE.email_public}`;
     mail.textContent = SITE.email_public;
+  } else if (SITE.whatsapp && SITE.whatsapp.url) {
+    mail.href = SITE.whatsapp.url;
+    mail.target = '_blank';
+    mail.rel = 'noopener';
+    mail.textContent = SITE.whatsapp.label || 'WhatsApp';
+    const wa = document.querySelector('[data-contact="wa-btn"]');
+    if (wa) {
+      wa.hidden = false;
+      wa.href = SITE.whatsapp.url;
+      wa.innerHTML = `${icon('whatsapp', 17)}Chat via WhatsApp`;
+    }
   } else {
     mail.remove();
   }
 
+  // jangan tampilkan tautan sosial yang sudah jadi tombol kontak utama di atas
+  const primary = (SITE.whatsapp && SITE.whatsapp.url) || '';
   const ul = document.querySelector('[data-contact="socials"]');
   ul.innerHTML = (SITE.socials || [])
+    .filter((s) => !(primary && s.url === primary))
     .map(
       (s) =>
         `<li><a href="${esc(s.url)}" target="_blank" rel="noopener me">${icon(s.icon || 'link', 17)}${esc(s.label)}</a></li>`
@@ -160,9 +183,10 @@ function renderFeed() {
       )
       .join('');
   }
-  card.querySelector('[data-feed="foot"]').textContent = feed.handle
-    ? `${feed.handle} — pratinjau otomatis dari karya terbaru.`
-    : '';
+  if (!feed.handle) link.textContent = 'Lihat semua karya →';
+
+  card.querySelector('[data-feed="foot"]').textContent =
+    feed.note || (feed.handle ? `${feed.handle} — pratinjau otomatis dari karya terbaru.` : '');
 }
 
 /* -------------------------------------------------------------- langganan */

@@ -4,6 +4,13 @@ let TAB = 'pending';
 
 document.addEventListener('DOMContentLoaded', async () => {
   Theme.set(localStorage.getItem(Theme.key) || 'dark');
+
+  // panel admin ikut warna aksen yang diatur di content/site.json
+  try {
+    const res = await api('/api/site');
+    applyBrand(res.site);
+  } catch (_) {}
+
   bindLogin();
 
   try {

@@ -76,10 +76,18 @@ function formatDate(iso) {
   }
 }
 
-/* --------------------------------------------------------- header & footer */
-function renderChrome(site, active) {
+/* Menerapkan warna aksen & rasio sampul dari content/site.json.
+   Dipakai halaman biasa lewat renderChrome(), dan oleh panel admin langsung. */
+function applyBrand(site) {
   const accent = site?.theme?.accent;
   if (accent) document.documentElement.style.setProperty('--accent', accent);
+  const ratio = site?.theme?.cover_ratio;
+  if (ratio) document.documentElement.style.setProperty('--cover-ratio', ratio);
+}
+
+/* --------------------------------------------------------- header & footer */
+function renderChrome(site, active) {
+  applyBrand(site);
 
   const name = site?.name || 'Portofolio';
   document.title = site?.seo?.title || `${name} — Portofolio`;

@@ -1,37 +1,47 @@
 {
-  "name": "Nama Anda",
-  "role": "Designer & Visual Artist",
-  "tagline": "Saya merancang identitas visual, antarmuka, dan cerita yang membuat orang berhenti sejenak.",
-  "location": "Jakarta, Indonesia",
-  "email_public": "halo@contoh.com",
+  "name": "Fajrul Ikhsan",
+  "role": "Web Developer Pemula",
+  "availability": "Terbuka untuk proyek baru",
+  "tagline": "Saya membuat website sederhana yang ringan, responsif, dan mudah digunakan.",
+  "location": "",
+  "email_public": "",
+  "whatsapp": {
+    "url": "https://wa.me/6285732462751",
+    "label": "085732462751"
+  },
   "about": [
-    "Ini adalah teks contoh. Ganti isinya lewat file content/site.json agar sesuai dengan cerita Anda.",
-    "Saya bekerja lintas media: identitas merek, desain antarmuka, dan arahan seni. Setiap proyek dimulai dari satu pertanyaan sederhana, apa yang sebenarnya ingin dikatakan karya ini."
+    "Saya adalah pelajar SMK yang tertarik pada teknologi, pembuatan website, dan jaringan komputer.",
+    "Saya mengembangkan project menggunakan HTML, CSS, dan JavaScript dasar. Fokus saya sederhana: halaman yang cepat dibuka, rapi di layar mana pun, dan gampang dipakai orang."
+  ],
+  "facts": [
+    { "k": "Nama", "v": "Fajrul Ikhsan" },
+    { "k": "Status", "v": "Pelajar SMK" },
+    { "k": "Bidang", "v": "Web Development & IT" }
   ],
   "services": [
-    { "title": "Identitas Merek", "desc": "Logo, sistem visual, dan panduan penggunaan." },
-    { "title": "Desain Antarmuka", "desc": "Web dan aplikasi, dari wireframe sampai siap kode." },
-    { "title": "Arahan Seni", "desc": "Konsep, moodboard, dan pengarahan produksi visual." }
+    { "title": "Website Portfolio", "desc": "Halaman profil untuk menampilkan identitas, keahlian, dan karya." },
+    { "title": "Landing Page", "desc": "Satu halaman fokus untuk satu tujuan, lengkap dengan tombol aksi." },
+    { "title": "Website Promosi", "desc": "Halaman promosi jasa atau produk dengan tampilan modern dan ringan." },
+    { "title": "Tampilan Responsive", "desc": "Penyesuaian tata letak agar rapi di HP, tablet, dan desktop." }
   ],
   "socials": [
-    { "label": "Instagram", "url": "https://instagram.com/", "icon": "instagram" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/", "icon": "linkedin" },
-    { "label": "Dribbble", "url": "https://dribbble.com/", "icon": "dribbble" },
-    { "label": "GitHub", "url": "https://github.com/", "icon": "github" }
+    { "label": "WhatsApp", "url": "https://wa.me/6285732462751", "icon": "whatsapp" }
   ],
   "feed": {
     "enabled": true,
-    "title": "Dari Instagram",
-    "handle": "@namaanda",
-    "url": "https://instagram.com/",
+    "title": "Cuplikan karya",
+    "handle": "",
+    "url": "/#karya",
+    "note": "Blok ini akan diganti feed Instagram begitu akunnya dikirim.",
     "embed_html": ""
   },
   "seo": {
-    "title": "Nama Anda — Portofolio",
-    "description": "Portofolio karya desain, antarmuka, dan arahan seni."
+    "title": "Fajrul Ikhsan — Web Developer Pemula",
+    "description": "Portfolio Fajrul Ikhsan, pelajar SMK yang membuat website portfolio, landing page, dan halaman promosi yang ringan dan responsif."
   },
   "theme": {
-    "accent": "#FF6B35",
-    "default_mode": "dark"
+    "accent": "#22A68A",
+    "default_mode": "dark",
+    "cover_ratio": "5 / 3"
   }
 }

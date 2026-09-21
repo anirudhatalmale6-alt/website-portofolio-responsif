@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123f4a"/><stop offset="1" stop-color="#226b91"/></linearGradient></defs>
+<rect width="1200" height="720" fill="#0a0a0a"/><rect x="45" y="45" width="1110" height="630" rx="28" fill="url(#g)" opacity=".85"/>
+<circle cx="980" cy="150" r="170" fill="#fff" opacity=".09"/><circle cx="1050" cy="540" r="240" fill="#fff" opacity=".06"/>
+<rect x="90" y="105" width="260" height="38" rx="19" fill="#000" opacity=".55"/>
+<text x="115" y="131" fill="#fff" font-family="Arial" font-size="18" letter-spacing="3">PORTFOLIO</text>
+<text x="95" y="540" fill="#fff" font-family="Georgia" font-size="62">Fajrul Ikhsan</text>
+<text x="95" y="585" fill="#fff" opacity=".72" font-family="Arial" font-size="22">Responsive website concept</text>
+</svg>

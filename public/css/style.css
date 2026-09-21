@@ -6,7 +6,8 @@
 
 /* 1) ------------------------------------------------------------ variabel */
 :root {
-  --accent: #ff6b35;
+  /* nilai cadangan; yang dipakai diambil dari content/site.json (theme.accent) */
+  --accent: #22a68a;
   --accent-ink: #12100e;
 
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
@@ -223,12 +224,14 @@ p { margin: 0 0 1em; }
   color: inherit;
   isolation: isolate;
 }
+/* rasio sampul diatur dari content/site.json (theme.cover_ratio) supaya gambar
+   karya tidak terpotong kalau Anda mengganti ukuran gambarnya nanti */
 .card__media {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--bg-3);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--cover-ratio, 3 / 2);
   border: 1px solid var(--line-soft);
 }
 .card__media img {
@@ -238,22 +241,14 @@ p { margin: 0 0 1em; }
   transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.4s ease;
 }
 .card:hover .card__media img { transform: scale(1.04); }
-.card__badge {
-  position: absolute;
-  left: 14px;
-  top: 14px;
-  z-index: 2;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(12, 12, 14, 0.62);
-  backdrop-filter: blur(8px);
-  color: #fff;
+.card__body { padding: 18px 2px 0; display: grid; gap: 6px; }
+.card__cat {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--accent);
 }
-.card__body { padding: 18px 2px 0; display: grid; gap: 6px; }
 .card__title {
   font-size: var(--step-1);
   display: flex;
@@ -468,7 +463,6 @@ p { margin: 0 0 1em; }
 .grid--work { grid-template-columns: repeat(12, 1fr); }
 .grid--work > * { grid-column: span 6; }
 .grid--work > .is-wide { grid-column: span 12; }
-.grid--work > .is-wide .card__media { aspect-ratio: 16 / 9; }
 .grid--work > .is-third { grid-column: span 4; }
 
 .empty {
@@ -491,7 +485,31 @@ p { margin: 0 0 1em; }
 .about__text p { font-size: var(--step-1); line-height: 1.55; color: var(--muted); }
 .about__text p:first-of-type { color: var(--text); }
 
-.services { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 0; }
+/* [hidden] harus menang atas display:inline-flex milik .btn */
+[hidden] { display: none !important; }
+
+/* fakta singkat: nama / status / bidang */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin-top: 32px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.facts > div { background: var(--bg); padding: 16px 18px; display: grid; gap: 4px; }
+.facts .k {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.facts .v { font-size: var(--step-0); color: var(--text); }
+
+.services { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 0; }
 .services li {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
@@ -559,7 +577,8 @@ p { margin: 0 0 1em; }
 .feed-card__head b { font-weight: 600; }
 .feed-card__head a { color: var(--accent); text-decoration: none; }
 .feed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-soft); }
-.feed-grid a { aspect-ratio: 1; overflow: hidden; background: var(--bg-3); }
+/* 4:3, bukan 1:1 — sampul karya berbentuk lanskap, kotak memotongnya terlalu banyak */
+.feed-grid a { aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg-3); }
 .feed-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease, opacity 0.3s ease; }
 .feed-grid a:hover img { transform: scale(1.07); opacity: 0.85; }
 .feed-card__foot { padding: 14px 18px; font-size: var(--step--1); color: var(--muted); }
@@ -735,7 +754,6 @@ p { margin: 0 0 1em; }
   .about__portrait, .meta-list { position: static; }
   .about__portrait { max-width: 320px; }
   .grid--work > *, .grid--work > .is-third, .grid--work > .is-wide { grid-column: span 12; }
-  .grid--work > .is-wide .card__media { aspect-ratio: 4 / 3; }
 }
 
 @media (max-width: 760px) {

@@ -76,11 +76,38 @@ node -e "JSON.parse(require('fs').readFileSync('content/projects.json','utf8'));
 Nama, tagline, teks "Tentang", daftar layanan, tautan media sosial, dan warna aksen
 ada di **`content/site.json`**. Struktur file sudah diberi contoh isinya.
 
+Isi `site.json` saat ini:
+
+| Kunci | Isinya |
+|---|---|
+| `name`, `role`, `tagline` | Teks besar di bagian paling atas halaman |
+| `availability` | Tulisan kecil bertitik hijau di atas nama |
+| `about` | Daftar paragraf di bagian Tentang |
+| `facts` | Kotak Nama / Status / Bidang. Tambah atau kurangi bebas |
+| `services` | Daftar layanan bernomor |
+| `whatsapp` | Nomor WhatsApp: `url` dan `label` yang tampil |
+| `socials` | Tombol media sosial. Tautan yang sama dengan WhatsApp di atas tidak diulang |
+| `feed` | Blok cuplikan di bagian Kontak (lihat di bawah) |
+| `seo` | Judul dan deskripsi untuk Google |
+| `theme` | Warna aksen, mode bawaan, rasio gambar sampul |
+
 Untuk mengganti warna aksen situs, ubah satu baris ini saja:
 
 ```json
-"theme": { "accent": "#FF6B35", "default_mode": "dark" }
+"theme": { "accent": "#22A68A", "default_mode": "dark", "cover_ratio": "5 / 3" }
 ```
+
+`cover_ratio` adalah perbandingan lebar : tinggi kotak gambar di halaman depan.
+Sekarang `5 / 3` karena gambar Anda berukuran 1200×720. Kalau nanti gambar
+karyanya berbentuk lain, ubah angka ini supaya gambar tidak terpotong —
+misalnya `4 / 3` untuk foto kamera biasa, atau `16 / 9` untuk tangkapan layar lebar.
+
+### Menyalakan feed Instagram
+
+Bagian `feed` di `site.json` sekarang menampilkan cuplikan karya Anda sendiri.
+Begitu Anda punya akun Instagram, isi `handle` dan `url`. Kalau ingin feed asli
+(bukan cuplikan), tempelkan kode embed resmi dari Instagram ke `embed_html` —
+kode itu yang akan dipakai menggantikan cuplikan.
 
 ---
 
