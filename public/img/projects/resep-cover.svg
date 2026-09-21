@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Buku Resep Ibu">
+  <defs>
+    <linearGradient id="g12" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B2113"/>
+      <stop offset="1" stop-color="#D9A441"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g12)"/>
+  <rect x="599" y="19" width="279" height="279" fill="#fff" opacity="0.126" transform="rotate(8.0 599 19)"/><rect x="934" y="55" width="129" height="129" fill="#fff" opacity="0.113" transform="rotate(6.4 934 55)"/><rect x="298" y="664" width="268" height="268" fill="#fff" opacity="0.092" transform="rotate(-0.5 298 664)"/><circle cx="669" cy="819" r="127" fill="#fff" opacity="0.063"/><circle cx="103" cy="245" r="182" fill="#fff" opacity="0.155"/><rect x="595" y="651" width="283" height="283" fill="#fff" opacity="0.163" transform="rotate(25.3 595 651)"/><rect x="632" y="122" width="42" height="42" fill="#fff" opacity="0.123" transform="rotate(27.5 632 122)"/>
+  <text x="56" y="838" font-family="Georgia, serif" font-size="46" fill="#ffffff" opacity="0.92">Buku Resep Ibu</text>
+  <text x="56" y="872" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#ffffff" opacity="0.6" letter-spacing="2">GAMBAR CONTOH 01</text>
+</svg>

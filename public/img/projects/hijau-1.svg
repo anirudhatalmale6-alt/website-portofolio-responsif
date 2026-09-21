@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Toko Hijau">
+  <defs>
+    <linearGradient id="g10" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14240F"/>
+      <stop offset="1" stop-color="#7FB544"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g10)"/>
+  <circle cx="1100" cy="768" r="41" fill="#fff" opacity="0.077"/><circle cx="1060" cy="648" r="173" fill="#fff" opacity="0.114"/><circle cx="357" cy="149" r="330" fill="#fff" opacity="0.080"/><circle cx="16" cy="676" r="248" fill="#fff" opacity="0.150"/><circle cx="973" cy="319" r="77" fill="#fff" opacity="0.149"/><circle cx="1031" cy="376" r="387" fill="#fff" opacity="0.156"/><rect x="246" y="662" width="402" height="402" fill="#fff" opacity="0.075" transform="rotate(-14.2 246 662)"/>
+  <text x="56" y="738" font-family="Georgia, serif" font-size="46" fill="#ffffff" opacity="0.92">Toko Hijau</text>
+  <text x="56" y="772" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#ffffff" opacity="0.6" letter-spacing="2">GAMBAR CONTOH 02</text>
+</svg>

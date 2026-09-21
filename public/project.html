@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karya</title>
+  <meta name="description" content="Detail proyek.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'dark'; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+  <header class="site-header" data-chrome="header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="project-hero">
+        <a class="back-link" href="/#karya" data-back>← Semua karya</a>
+        <p class="eyebrow" data-p="category"></p>
+        <h1 data-p="title"></h1>
+        <p class="lead" data-p="summary"></p>
+      </section>
+
+      <div class="cover"><img data-p="cover" alt="" width="1200" height="900"></div>
+
+      <section class="section">
+        <div class="project-body">
+          <ul class="meta-list" data-p="meta"></ul>
+          <div>
+            <div class="prose" data-p="body"></div>
+            <div class="tag-row" data-p="tags"></div>
+            <div class="gallery" data-p="gallery"></div>
+          </div>
+        </div>
+
+        <div class="share" data-share>
+          <span>Bagikan</span>
+        </div>
+
+        <!-- ====================================================== KOMENTAR -->
+        <section class="comments" id="komentar" style="margin-top:clamp(40px,6vw,80px)">
+          <p class="eyebrow">Diskusi</p>
+          <h2>Komentar <span data-c="count" style="color:var(--muted)"></span></h2>
+          <p style="color:var(--muted);margin:0">Masukan Anda sangat membantu. Komentar tampil setelah disetujui pemilik situs.</p>
+
+          <ul class="comment-list" data-c="list"></ul>
+
+          <form class="comment-form" id="comment-form" novalidate>
+            <div class="two">
+              <div class="field">
+                <label for="c-name">Nama</label>
+                <input id="c-name" name="name" type="text" maxlength="60" placeholder="Nama Anda" required>
+              </div>
+              <div class="field">
+                <label for="c-email">E-mail (opsional, tidak ditampilkan)</label>
+                <input id="c-email" name="email" type="email" maxlength="160" placeholder="nama@contoh.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-body">Komentar</label>
+              <textarea id="c-body" name="body" maxlength="2000" placeholder="Apa pendapat Anda tentang proyek ini?" required></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="c-website">Jangan isi kolom ini</label>
+              <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="msg" id="comment-msg" hidden></p>
+            <div><button class="btn" type="submit">Kirim komentar</button></div>
+          </form>
+        </section>
+
+        <nav class="pager" data-pager aria-label="Navigasi proyek"></nav>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" data-chrome="footer"></footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/project.js"></script>
+</body>
+</html>

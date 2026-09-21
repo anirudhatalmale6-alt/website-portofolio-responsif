@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Admin — Portofolio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-shell { max-width: 1040px; margin-inline: auto; padding: 40px var(--gutter) 80px; }
+    .admin-top { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:30px; }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin-bottom:30px; }
+    .stat { border:1px solid var(--line-soft); border-radius:var(--radius); padding:18px 20px; background:var(--bg-2); }
+    .stat b { display:block; font-family:var(--font-display); font-size:var(--step-2); font-weight:400; }
+    .stat span { font-family:var(--font-mono); font-size:0.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px; }
+    .row-item { border:1px solid var(--line-soft); border-radius:var(--radius); padding:16px 18px; background:var(--bg-2); display:grid; gap:10px; }
+    .row-item + .row-item { margin-top:12px; }
+    .row-head { display:flex; gap:12px; align-items:center; flex-wrap:wrap; font-size:var(--step--1); color:var(--muted); }
+    .row-head b { color:var(--text); font-size:var(--step-0); }
+    .pill { font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:999px; border:1px solid var(--line); }
+    .pill--pending { color:#f5b544; border-color:#f5b54455; }
+    .pill--approved { color:#4ade80; border-color:#4ade8055; }
+    .pill--spam { color:#f87171; border-color:#f8717155; }
+    .row-actions { display:flex; gap:8px; flex-wrap:wrap; }
+    .row-actions button { padding:7px 14px; font-size:var(--step--1); border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--text); cursor:pointer; font:inherit; font-size:var(--step--1); }
+    .row-actions button:hover { border-color:var(--accent); }
+    .row-actions .danger:hover { border-color:#f87171; color:#f87171; }
+    table { width:100%; border-collapse:collapse; font-size:var(--step--1); }
+    th, td { text-align:left; padding:11px 10px; border-bottom:1px solid var(--line-soft); }
+    th { font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .login-box { max-width:390px; margin:14vh auto; display:grid; gap:16px; }
+    [hidden] { display:none !important; }
+  </style>
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'dark'; } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================= LOGIN -->
+  <section id="login" hidden>
+    <div class="login-box">
+      <div>
+        <p class="eyebrow">Panel admin</p>
+        <h1 style="font-size:var(--step-2)">Masuk</h1>
+      </div>
+      <form id="login-form" novalidate style="display:grid;gap:14px">
+        <div class="field">
+          <label for="u">Username</label>
+          <input id="u" name="username" type="text" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="p">Password</label>
+          <input id="p" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <p class="msg" id="login-msg" hidden></p>
+        <button class="btn" type="submit">Masuk</button>
+      </form>
+      <p class="form-note"><a href="/" style="color:var(--muted)">← Kembali ke situs</a></p>
+    </div>
+  </section>
+
+  <!-- ========================================================= DASHBOARD -->
+  <section id="dash" hidden>
+    <div class="admin-shell">
+      <div class="admin-top">
+        <div>
+          <p class="eyebrow">Panel admin</p>
+          <h1 style="font-size:var(--step-2)">Kelola situs</h1>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn btn--ghost" href="/">Lihat situs</a>
+          <button class="btn btn--ghost" id="logout" type="button">Keluar</button>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="tabs" id="tabs">
+        <button class="btn btn--ghost is-active" data-tab="pending" type="button">Menunggu</button>
+        <button class="btn btn--ghost" data-tab="approved" type="button">Disetujui</button>
+        <button class="btn btn--ghost" data-tab="spam" type="button">Spam</button>
+        <button class="btn btn--ghost" data-tab="subs" type="button">Langganan</button>
+      </div>
+
+      <div id="panel"></div>
+    </div>
+  </section>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

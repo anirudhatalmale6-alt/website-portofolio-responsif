@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio</title>
+  <meta name="description" content="Portofolio karya.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    // pasang tema sebelum render agar tidak ada kedipan putih
+    try { document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'dark'; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <header class="site-header" data-chrome="header"></header>
+
+  <main id="main">
+
+    <!-- ============================================================ HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero__status"><i></i><span data-hero="status">Terbuka untuk proyek baru</span></p>
+        <h1 data-hero="title"></h1>
+        <p class="hero__lead" data-hero="lead"></p>
+        <div class="hero__actions">
+          <a class="btn" href="#karya">Lihat karya</a>
+          <a class="btn btn--ghost" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" data-hero="marquee"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================== KARYA -->
+    <section class="section" id="karya">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Pilihan karya</p>
+            <h2>Proyek yang saya kerjakan belakangan ini.</h2>
+          </div>
+          <div class="filters" id="filters" role="group" aria-label="Saring berdasarkan kategori"></div>
+        </div>
+        <div class="grid grid--work" id="work-grid">
+          <div class="skeleton is-wide" style="height:340px"></div>
+          <div class="skeleton" style="height:280px"></div>
+          <div class="skeleton" style="height:280px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= TENTANG -->
+    <section class="section" id="tentang">
+      <div class="wrap">
+        <p class="eyebrow">Tentang</p>
+        <div class="about">
+          <div class="about__portrait reveal">
+            <img src="/img/portrait.svg" alt="Foto profil" width="600" height="720" loading="lazy">
+          </div>
+          <div class="about__text reveal" data-about></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= LANGGANAN -->
+    <section class="section" id="langganan">
+      <div class="wrap">
+        <div class="subscribe reveal">
+          <div>
+            <p class="eyebrow">Buletin</p>
+            <h2>Karya baru, langsung ke kotak masuk Anda.</h2>
+            <p>Satu e-mail tiap kali ada proyek baru yang saya rilis. Tanpa spam, berhenti kapan saja.</p>
+          </div>
+          <form id="subscribe-form" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="sub-email">Alamat e-mail</label>
+                <input id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nama@contoh.com" required>
+              </div>
+              <button class="btn" type="submit">Berlangganan</button>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="sub-website">Jangan isi kolom ini</label>
+              <input id="sub-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="msg" id="subscribe-msg" hidden></p>
+            <p class="form-note">E-mail Anda hanya dipakai untuk kabar karya baru.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================== KONTAK -->
+    <section class="section" id="kontak">
+      <div class="wrap">
+        <div class="connect">
+          <div class="reveal">
+            <p class="eyebrow">Kontak</p>
+            <h2>Punya proyek? Mari bicara.</h2>
+            <p style="color:var(--muted);max-width:44ch">Ceritakan singkat idenya, saya balas dalam 1×24 jam kerja.</p>
+            <p><a class="mail" data-contact="email" href="#"></a></p>
+            <ul class="social" data-contact="socials" style="margin-top:26px"></ul>
+          </div>
+          <div class="feed-card reveal" data-feed hidden>
+            <div class="feed-card__head">
+              <b data-feed="title"></b>
+              <a data-feed="link" href="#" target="_blank" rel="noopener">Lihat semua →</a>
+            </div>
+            <div class="feed-grid" data-feed="grid"></div>
+            <div class="feed-card__foot" data-feed="foot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" data-chrome="footer"></footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

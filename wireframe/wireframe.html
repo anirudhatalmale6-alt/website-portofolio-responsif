@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Wireframe — Website Portofolio</title>
+<style>
+  :root {
+    --ink: #1a1a1c;
+    --line: #c9c6bf;
+    --fill: #e8e5df;
+    --fill-2: #dcd8d0;
+    --accent: #ff6b35;
+    --muted: #7c786f;
+    --paper: #f6f4ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 13px/1.45 ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 26px 30px 34px;
+  }
+  h1 { font-family: Georgia, serif; font-weight: 400; font-size: 26px; margin: 0 0 4px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 22px; font-size: 12.5px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr 300px; gap: 22px; align-items: start; }
+  .sheet { border: 1px solid var(--line); background: #fff; border-radius: 6px; overflow: hidden; }
+  .sheet > header {
+    padding: 8px 12px; border-bottom: 1px solid var(--line); background: var(--fill);
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+    display: flex; justify-content: space-between;
+  }
+  .page { padding: 10px; display: grid; gap: 8px; }
+  .blk {
+    border: 1px dashed var(--line); background: var(--fill); border-radius: 4px;
+    padding: 9px 11px; position: relative;
+  }
+  .blk.solid { background: var(--fill-2); border-style: solid; }
+  .blk .t { font-size: 11.5px; font-weight: 700; }
+  .blk .d { font-size: 11px; color: var(--muted); }
+  .num {
+    position: absolute; right: 7px; top: 6px; width: 17px; height: 17px; border-radius: 50%;
+    background: var(--accent); color: #fff; font-size: 10px; display: grid; place-items: center; font-weight: 700;
+  }
+  .bar { height: 7px; background: var(--line); border-radius: 3px; margin: 5px 0; }
+  .bar.s { width: 45%; } .bar.m { width: 70%; } .bar.l { width: 92%; }
+  .imgbox {
+    background: repeating-linear-gradient(45deg, var(--fill-2) 0 7px, var(--fill) 7px 14px);
+    border: 1px solid var(--line); border-radius: 4px; display: grid; place-items: center;
+    color: var(--muted); font-size: 10.5px; letter-spacing: .1em;
+  }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .navbar { display: flex; justify-content: space-between; align-items: center; }
+  .dots { display: flex; gap: 5px; }
+  .dot { width: 26px; height: 7px; background: var(--line); border-radius: 3px; }
+  .pill { display: inline-block; height: 15px; border-radius: 8px; background: var(--line); }
+  .btnw { display: inline-block; height: 20px; width: 78px; border-radius: 10px; background: var(--accent); opacity: .85; }
+  .btnw.ghost { background: transparent; border: 1px solid var(--line); }
+  .notes { font-size: 12px; color: var(--ink); }
+  .notes h2 { font-size: 13px; margin: 0 0 8px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .notes ol { margin: 0 0 16px; padding-left: 20px; }
+  .notes li { margin-bottom: 7px; }
+  .swatches { display: flex; gap: 8px; margin: 6px 0 14px; }
+  .sw { flex: 1; height: 40px; border-radius: 4px; border: 1px solid var(--line); display: grid; align-content: end; padding: 3px; font-size: 9px; color: #fff; }
+  .mobile { width: 168px; margin: 0 auto; border: 2px solid var(--ink); border-radius: 16px; padding: 7px 5px; background: #fff; }
+  .mobile .page { padding: 4px; gap: 5px; }
+  .mobile .blk { padding: 6px 7px; }
+  .mobile .blk .t { font-size: 9.5px; }
+  .mobile .blk .d { font-size: 9px; }
+  .foot { margin-top: 18px; font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<h1>Wireframe — Website Portofolio Responsif</h1>
+<p class="sub">Struktur halaman versi awal. Abu-abu = blok konten, jingga = elemen interaktif utama. Belum final, silakan dikoreksi.</p>
+
+<div class="cols">
+
+  <!-- ==================================================== BERANDA -->
+  <div class="sheet">
+    <header><span>01 — Beranda</span><span>Desktop 1280px</span></header>
+    <div class="page">
+      <div class="blk solid navbar">
+        <div><span class="t">Logo / Nama</span></div>
+        <div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot" style="width:14px;border-radius:50%"></i></div>
+      </div>
+
+      <div class="blk" style="padding:14px 11px">
+        <span class="num">1</span>
+        <div class="d" style="font-size:10px;letter-spacing:.12em">STATUS · TERBUKA UNTUK PROYEK</div>
+        <div class="bar l" style="height:16px"></div>
+        <div class="bar m" style="height:16px;background:var(--accent);opacity:.6"></div>
+        <div class="bar l"></div>
+        <div class="bar s"></div>
+        <div style="margin-top:9px"><span class="btnw"></span> <span class="btnw ghost"></span></div>
+      </div>
+
+      <div class="blk" style="padding:6px 11px">
+        <div class="d">Ticker berjalan: layanan &amp; kategori</div>
+      </div>
+
+      <div class="blk">
+        <span class="num">2</span>
+        <div class="t">Bagian Karya</div>
+        <div class="d">Judul bagian kiri · filter kategori kanan</div>
+        <div style="display:flex;gap:5px;margin:7px 0 9px">
+          <span class="pill" style="width:48px;background:var(--accent);opacity:.8"></span>
+          <span class="pill" style="width:62px"></span><span class="pill" style="width:70px"></span><span class="pill" style="width:54px"></span>
+        </div>
+        <div class="imgbox" style="height:74px">KARYA UTAMA (LEBAR PENUH)</div>
+        <div class="row2" style="margin-top:8px">
+          <div class="imgbox" style="height:56px">KARYA</div>
+          <div class="imgbox" style="height:56px">KARYA</div>
+        </div>
+        <div class="row2" style="margin-top:8px">
+          <div class="imgbox" style="height:56px">KARYA</div>
+          <div class="imgbox" style="height:56px">KARYA</div>
+        </div>
+        <div class="d" style="margin-top:7px">Tiap kartu: sampul, kategori, judul, ringkasan, tahun, jumlah komentar</div>
+      </div>
+
+      <div class="blk">
+        <span class="num">3</span>
+        <div class="t">Tentang</div>
+        <div class="row2" style="margin-top:7px">
+          <div class="imgbox" style="height:74px">FOTO</div>
+          <div>
+            <div class="bar l"></div><div class="bar l"></div><div class="bar m"></div>
+            <div class="d" style="margin-top:6px">Daftar layanan (01 · 02 · 03)</div>
+            <div class="bar l"></div><div class="bar l"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blk solid">
+        <span class="num">4</span>
+        <div class="t">Formulir berlangganan e-mail</div>
+        <div class="row2" style="margin-top:7px;align-items:center">
+          <div><div class="bar l"></div><div class="bar m"></div></div>
+          <div style="display:flex;gap:6px;align-items:center">
+            <span class="pill" style="flex:1;height:22px;border-radius:6px"></span>
+            <span class="btnw" style="width:64px"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="blk">
+        <span class="num">5</span>
+        <div class="t">Kontak + media sosial</div>
+        <div class="row2" style="margin-top:7px">
+          <div>
+            <div class="bar m" style="height:12px"></div>
+            <div class="bar l"></div>
+            <div style="display:flex;gap:5px;margin-top:7px">
+              <span class="pill" style="width:56px"></span><span class="pill" style="width:56px"></span><span class="pill" style="width:52px"></span>
+            </div>
+          </div>
+          <div>
+            <div class="d" style="margin-bottom:4px">Feed media sosial</div>
+            <div class="row3">
+              <div class="imgbox" style="height:30px"></div><div class="imgbox" style="height:30px"></div><div class="imgbox" style="height:30px"></div>
+              <div class="imgbox" style="height:30px"></div><div class="imgbox" style="height:30px"></div><div class="imgbox" style="height:30px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blk solid"><div class="d">Footer · hak cipta · tautan sosial</div></div>
+    </div>
+  </div>
+
+  <!-- ================================================= DETAIL KARYA -->
+  <div class="sheet">
+    <header><span>02 — Detail Karya</span><span>/karya/nama-proyek</span></header>
+    <div class="page">
+      <div class="blk solid navbar">
+        <div><span class="t">Logo / Nama</span></div>
+        <div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+      </div>
+
+      <div class="blk">
+        <span class="num">6</span>
+        <div class="d" style="font-size:10px">← SEMUA KARYA</div>
+        <div class="d" style="font-size:10px;letter-spacing:.12em;margin-top:6px">KATEGORI · TAHUN</div>
+        <div class="bar m" style="height:15px"></div>
+        <div class="bar l"></div>
+      </div>
+
+      <div class="imgbox" style="height:110px">GAMBAR SAMPUL PROYEK</div>
+
+      <div class="blk">
+        <span class="num">7</span>
+        <div class="row2" style="grid-template-columns:90px 1fr;gap:10px">
+          <div>
+            <div class="d" style="font-size:9.5px">KLIEN</div><div class="bar l"></div>
+            <div class="d" style="font-size:9.5px">TAHUN</div><div class="bar s"></div>
+            <div class="d" style="font-size:9.5px">PERAN</div><div class="bar m"></div>
+            <div class="d" style="font-size:9.5px">TAUTAN</div><div class="bar s"></div>
+          </div>
+          <div>
+            <div class="t">Cerita proyek</div>
+            <div class="bar l"></div><div class="bar l"></div><div class="bar m"></div>
+            <div class="bar l"></div><div class="bar s"></div>
+            <div style="display:flex;gap:5px;margin-top:6px">
+              <span class="pill" style="width:40px"></span><span class="pill" style="width:46px"></span><span class="pill" style="width:52px"></span>
+            </div>
+          </div>
+        </div>
+        <div class="imgbox" style="height:52px;margin-top:9px">GALERI GAMBAR TAMBAHAN</div>
+        <div class="imgbox" style="height:52px;margin-top:6px">GALERI GAMBAR TAMBAHAN</div>
+      </div>
+
+      <div class="blk solid">
+        <span class="num">8</span>
+        <div class="t">Tombol bagikan</div>
+        <div style="display:flex;gap:5px;margin-top:7px;flex-wrap:wrap">
+          <span class="pill" style="width:64px"></span><span class="pill" style="width:38px"></span>
+          <span class="pill" style="width:60px"></span><span class="pill" style="width:60px"></span>
+          <span class="pill" style="width:70px;background:var(--accent);opacity:.8"></span>
+        </div>
+        <div class="d" style="margin-top:6px">WhatsApp · X · Facebook · LinkedIn · Salin tautan</div>
+      </div>
+
+      <div class="blk">
+        <span class="num">9</span>
+        <div class="t">Komentar pengunjung</div>
+        <div class="d">Hanya komentar yang sudah disetujui yang tampil</div>
+        <div class="blk" style="margin-top:7px;background:#fff">
+          <div style="display:flex;gap:6px;align-items:center">
+            <span style="width:16px;height:16px;border-radius:50%;background:var(--accent);opacity:.8;display:inline-block"></span>
+            <span class="pill" style="width:60px;height:8px"></span>
+          </div>
+          <div class="bar l"></div><div class="bar m"></div>
+        </div>
+        <div class="blk" style="margin-top:6px;background:#fff">
+          <div style="display:flex;gap:6px;align-items:center">
+            <span style="width:16px;height:16px;border-radius:50%;background:var(--accent);opacity:.8;display:inline-block"></span>
+            <span class="pill" style="width:74px;height:8px"></span>
+          </div>
+          <div class="bar l"></div>
+        </div>
+        <div class="d" style="margin-top:9px">Formulir komentar</div>
+        <div class="row2" style="margin-top:4px">
+          <span class="pill" style="height:20px;border-radius:5px"></span>
+          <span class="pill" style="height:20px;border-radius:5px"></span>
+        </div>
+        <span class="pill" style="display:block;height:36px;border-radius:5px;margin-top:6px"></span>
+        <div style="margin-top:7px"><span class="btnw" style="width:96px"></span></div>
+      </div>
+
+      <div class="row2">
+        <div class="blk"><div class="d">← Proyek sebelumnya</div></div>
+        <div class="blk" style="text-align:right"><div class="d">Proyek berikutnya →</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ MOBILE + CATATAN -->
+  <div>
+    <div class="sheet" style="margin-bottom:18px">
+      <header><span>03 — Mobile</span><span>390px</span></header>
+      <div style="padding:12px 8px">
+        <div class="mobile">
+          <div class="page">
+            <div class="blk solid navbar" style="padding:5px 7px">
+              <span class="t">Nama</span>
+              <span style="display:flex;gap:3px"><i class="dot" style="width:11px;height:11px;border-radius:50%"></i><i class="dot" style="width:11px;height:11px;border-radius:50%"></i></span>
+            </div>
+            <div class="blk">
+              <div class="bar l" style="height:11px"></div>
+              <div class="bar m" style="height:11px;background:var(--accent);opacity:.6"></div>
+              <div class="bar l"></div>
+              <div style="margin-top:5px"><span class="btnw" style="width:100%;height:15px"></span></div>
+              <div style="margin-top:4px"><span class="btnw ghost" style="width:100%;height:15px"></span></div>
+            </div>
+            <div class="blk">
+              <div class="t">Karya</div>
+              <div style="display:flex;gap:3px;margin:4px 0 5px;overflow:hidden">
+                <span class="pill" style="width:28px;height:10px;background:var(--accent);opacity:.8"></span>
+                <span class="pill" style="width:34px;height:10px"></span><span class="pill" style="width:34px;height:10px"></span>
+              </div>
+              <div class="imgbox" style="height:40px;font-size:8px">KARYA</div>
+              <div class="imgbox" style="height:40px;margin-top:4px;font-size:8px">KARYA</div>
+              <div class="imgbox" style="height:40px;margin-top:4px;font-size:8px">KARYA</div>
+            </div>
+            <div class="blk"><div class="t">Tentang</div><div class="bar l"></div><div class="bar m"></div></div>
+            <div class="blk solid">
+              <div class="t">Langganan</div>
+              <span class="pill" style="display:block;height:14px;border-radius:5px;margin-top:4px"></span>
+              <span class="btnw" style="width:100%;height:14px;margin-top:4px"></span>
+            </div>
+            <div class="blk"><div class="t">Kontak &amp; sosial</div><div class="row3" style="margin-top:4px"><div class="imgbox" style="height:20px"></div><div class="imgbox" style="height:20px"></div><div class="imgbox" style="height:20px"></div></div></div>
+          </div>
+        </div>
+        <p class="d" style="text-align:center;margin:10px 0 0;font-size:11px;color:var(--muted)">Satu kolom · menu jadi tombol hamburger · kartu karya menumpuk</p>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h2>Arah visual</h2>
+      <div class="swatches">
+        <div class="sw" style="background:#0c0c0e">#0C0C0E</div>
+        <div class="sw" style="background:#141417">#141417</div>
+        <div class="sw" style="background:#ff6b35">#FF6B35</div>
+        <div class="sw" style="background:#f7f4ee;color:#16150f">#F7F4EE</div>
+      </div>
+      <p style="margin:0 0 14px;color:var(--muted);font-size:11.5px">
+        Latar gelap arang, teks krem, satu warna aksen jingga. Judul memakai huruf serif,
+        isi memakai huruf sans. Tersedia mode terang &amp; gelap (tombol di kanan atas).
+      </p>
+
+      <h2>Keterangan blok</h2>
+      <ol>
+        <li>Hero: nama, peran, dan satu kalimat posisi.</li>
+        <li>Galeri karya dengan filter kategori.</li>
+        <li>Tentang + daftar layanan.</li>
+        <li>Formulir berlangganan e-mail.</li>
+        <li>Kontak, tombol sosial, dan feed.</li>
+        <li>Judul proyek + tautan kembali.</li>
+        <li>Detail proyek: metadata kiri, cerita kanan, galeri di bawah.</li>
+        <li>Tombol bagikan ke media sosial.</li>
+        <li>Komentar + formulir (dimoderasi lewat panel admin).</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<div class="foot">
+  <span>Wireframe v1 — Website Portofolio Responsif Interaktif</span>
+  <span>Proyek 40723775</span>
+</div>
+
+</body>
+</html>

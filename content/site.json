@@ -1,0 +1,37 @@
+{
+  "name": "Nama Anda",
+  "role": "Designer & Visual Artist",
+  "tagline": "Saya merancang identitas visual, antarmuka, dan cerita yang membuat orang berhenti sejenak.",
+  "location": "Jakarta, Indonesia",
+  "email_public": "halo@contoh.com",
+  "about": [
+    "Ini adalah teks contoh. Ganti isinya lewat file content/site.json agar sesuai dengan cerita Anda.",
+    "Saya bekerja lintas media: identitas merek, desain antarmuka, dan arahan seni. Setiap proyek dimulai dari satu pertanyaan sederhana, apa yang sebenarnya ingin dikatakan karya ini."
+  ],
+  "services": [
+    { "title": "Identitas Merek", "desc": "Logo, sistem visual, dan panduan penggunaan." },
+    { "title": "Desain Antarmuka", "desc": "Web dan aplikasi, dari wireframe sampai siap kode." },
+    { "title": "Arahan Seni", "desc": "Konsep, moodboard, dan pengarahan produksi visual." }
+  ],
+  "socials": [
+    { "label": "Instagram", "url": "https://instagram.com/", "icon": "instagram" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/", "icon": "linkedin" },
+    { "label": "Dribbble", "url": "https://dribbble.com/", "icon": "dribbble" },
+    { "label": "GitHub", "url": "https://github.com/", "icon": "github" }
+  ],
+  "feed": {
+    "enabled": true,
+    "title": "Dari Instagram",
+    "handle": "@namaanda",
+    "url": "https://instagram.com/",
+    "embed_html": ""
+  },
+  "seo": {
+    "title": "Nama Anda — Portofolio",
+    "description": "Portofolio karya desain, antarmuka, dan arahan seni."
+  },
+  "theme": {
+    "accent": "#FF6B35",
+    "default_mode": "dark"
+  }
+}

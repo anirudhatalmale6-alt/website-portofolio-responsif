@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Festival Layar">
+  <defs>
+    <linearGradient id="g11" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A1016"/>
+      <stop offset="1" stop-color="#E2555A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g11)"/>
+  <circle cx="249" cy="441" r="411" fill="#fff" opacity="0.063"/><rect x="607" y="733" width="216" height="216" fill="#fff" opacity="0.063" transform="rotate(0.4 607 733)"/><rect x="13" y="769" width="86" height="86" fill="#fff" opacity="0.081" transform="rotate(-26.7 13 769)"/><circle cx="842" cy="21" r="324" fill="#fff" opacity="0.075"/><circle cx="598" cy="878" r="242" fill="#fff" opacity="0.065"/><rect x="992" y="251" width="372" height="372" fill="#fff" opacity="0.106" transform="rotate(-29.6 992 251)"/><rect x="360" y="84" width="232" height="232" fill="#fff" opacity="0.123" transform="rotate(-25.9 360 84)"/>
+  <text x="56" y="838" font-family="Georgia, serif" font-size="46" fill="#ffffff" opacity="0.92">Festival Layar</text>
+  <text x="56" y="872" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#ffffff" opacity="0.6" letter-spacing="2">GAMBAR CONTOH 01</text>
+</svg>
